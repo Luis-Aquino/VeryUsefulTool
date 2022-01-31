@@ -15,13 +15,16 @@ export class ToolService {
       ) { }
 
     showMessage(msg: string, isError: boolean = false): void{
-      this.snackBar.open(msg, 'Fechar',
+      let snackBarRef = this.snackBar.open(msg, 'Fechar',
       {
         verticalPosition: 'top',
         horizontalPosition: 'right',
-        duration: 8000,
+        duration: 3000,
         panelClass: ['blue-snackbar'],
       });
+      snackBarRef.afterDismissed().subscribe(() => {
+        window.location.reload();
+      })
     }
 
     findAll() : Observable<Tool[]> {

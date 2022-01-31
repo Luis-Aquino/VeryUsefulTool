@@ -21,7 +21,8 @@ export class CardsrcnaddComponent implements OnInit {
 
   ngOnInit(): void {
     this.atualizarDados();
-  } 
+  }    
+
   atualizarDados(): void {
     this.service.findAll().subscribe(tools => {
       this.tools = tools
@@ -42,6 +43,7 @@ export class CardsrcnaddComponent implements OnInit {
       this.atualizarDados();
     });
   }
+  //Lógica para buscar ferramenta de acordo com os parâmetros de seleção
   findTool(): void {
     if (this.searchType == false && this.stringSearch.length != 0){
       this.service.findByTitle(this.stringSearch).subscribe(tools => {
