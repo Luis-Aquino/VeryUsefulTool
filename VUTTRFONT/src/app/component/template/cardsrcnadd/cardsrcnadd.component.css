@@ -1,0 +1,55 @@
+.example-margin{
+    margin: 15px;
+}
+mat-icon {
+    margin-left: -8px;
+    margin-right: 10px;
+}
+button{
+    margin-left: 90px;
+    width: 120px;
+}
+.cardsearch{
+    margin-top: -20px;
+    max-width: 600px;
+}
+.cards{
+    max-width: 600px;
+}
+.card-text-content{
+    text-align: left;
+}
+button{
+    position: absolute;
+    margin-left: 47px;
+    height: 30px;
+}
+.delete{
+    margin-top: -7px;
+
+}
+
+.cardTitle{
+    text-align: left;
+}
+.botaonew{
+    margin-left: -50px;
+}
+
+@media(max-width:768px){
+    button{
+        position: absolute;
+        margin-left: 200px;
+        height: 30px;
+    }
+};
+button.mat-focus-indicator.botaoNew.mat-raised-button.mat-button-base.mat-primary {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.mat-raised-button{
+    margin-left: 478px;
+}
+.classSearch{
+    margin-left: -220px;
+}
