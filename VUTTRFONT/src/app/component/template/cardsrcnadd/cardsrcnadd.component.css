@@ -22,7 +22,7 @@ button{
 button{
     position: absolute;
     margin-left: 47px;
-    height: 30px;
+    height: 33px;
 }
 .delete{
     margin-top: -7px;
@@ -52,4 +52,13 @@ button.mat-focus-indicator.botaoNew.mat-raised-button.mat-button-base.mat-primar
 }
 .classSearch{
     margin-left: -220px;
+}
+.add{
+    margin-bottom: 6px;
+}
+.modify{
+    margin-left: 350px;
+}
+mat-icon.mat-icon.notranslate.Modify.material-icons.mat-icon-no-color {
+    margin-bottom: 5px;
 }

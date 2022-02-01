@@ -18,7 +18,9 @@ import { DialognewComponent } from './component/template/dialognew/dialognew.com
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { EventEmitterService } from './component/eventos/event-emitter.service';
+import { DialogdeleteComponent } from './component/template/dialogdelete/dialogdelete.component';
+import { DialogmodifyComponent } from './component/template/dialogmodify/dialogmodify.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { EventEmitterService } from './component/eventos/event-emitter.service';
     HeaderComponent,
     CardsrcnaddComponent,
     DialognewComponent,
+    DialogdeleteComponent,
+    DialogmodifyComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +49,7 @@ import { EventEmitterService } from './component/eventos/event-emitter.service';
     MatChipsModule,
     MatSnackBarModule
   ],
-  providers: [
-    EventEmitterService
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

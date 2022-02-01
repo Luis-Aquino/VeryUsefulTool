@@ -23,7 +23,7 @@ export class ToolService {
         panelClass: ['blue-snackbar'],
       });
       snackBarRef.afterDismissed().subscribe(() => {
-        window.location.reload();
+        //window.location.reload();
       })
     }
 

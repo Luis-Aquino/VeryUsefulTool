@@ -1,24 +1,24 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Inject } from '@angular/core';
 import { Tool } from 'src/app/tool.model';
-import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
-import {MatChipInputEvent} from '@angular/material/chips';
-import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-dialognew',
-  templateUrl: './dialognew.component.html',
-  styleUrls: ['./dialognew.component.css']
+  selector: 'app-dialogmodify',
+  templateUrl: './dialogmodify.component.html',
+  styleUrls: ['./dialogmodify.component.css']
 })
-export class DialognewComponent implements OnInit {  
+export class DialogmodifyComponent implements OnInit {
   separatorKeysCodes: number[] = [ENTER, COMMA];
   tagCtrl = new FormControl();
   filteredTags!: Observable<string[]>;
   tags: string[] = [];
-
+  
   tool: Tool = {
     title: "",
     link: "",
@@ -28,27 +28,22 @@ export class DialognewComponent implements OnInit {
 
   @ViewChild('tagInput')
   tagInput!: ElementRef<HTMLInputElement>;
+  router: any;
 
-  
   constructor(
-    public dialogRef: MatDialogRef<DialognewComponent>,
-    private router: Router,
-  ) {  
- }
+    @Inject(MAT_DIALOG_DATA) public data: Tool,
+    public dialogRef: MatDialogRef<DialogmodifyComponent>,
+  ) { }
 
   ngOnInit(): void {
-
+     this.tool = this.data;
+     this.tags = this.data.tags;
   }
-  saveTool(): void {
+  modifyTool(): void{
     this.tool.tags = this.tags;
     console.log(this.tool);
     this.dialogRef.close(this.tool);
     this.router.navigate(['']);
-  }
-
-  cancel(): void {
-    this.dialogRef.close();
-    /*this.toolForm.reset()*/
   }
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
@@ -76,6 +71,11 @@ export class DialognewComponent implements OnInit {
     this.tags.push(event.option.viewValue);
     this.tagInput.nativeElement.value = '';
     this.tagCtrl.setValue(null);
+  }
+
+  cancel(): void {
+    this.dialogRef.close();
+    /*this.toolForm.reset()*/
   }
 
 }
