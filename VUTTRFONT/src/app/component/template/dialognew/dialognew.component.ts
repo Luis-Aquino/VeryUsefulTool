@@ -2,7 +2,7 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Tool } from 'src/app/tool.model';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { Router } from '@angular/router';
@@ -17,6 +17,8 @@ export class DialognewComponent implements OnInit {
   tagCtrl = new FormControl();
   filteredTags!: Observable<string[]>;
   tags: string[] = [];
+  form!: FormGroup;
+
 
   tool: Tool = {
     title: "",
@@ -28,10 +30,12 @@ export class DialognewComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<DialognewComponent>,
     private router: Router,
-  ) {  
- }
+  ) { }
   //Navega para /newTool quanto iniciado
   ngOnInit(): void {
+    this.form = new FormGroup({
+      title: new FormControl('', [Validators.required]),
+    });
     this.router.navigate(['newTool']);
   }
   saveTool(): void {

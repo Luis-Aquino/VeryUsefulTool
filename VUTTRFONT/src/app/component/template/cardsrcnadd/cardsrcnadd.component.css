@@ -5,10 +5,7 @@ mat-icon {
     margin-left: -8px;
     margin-right: 10px;
 }
-button{
-    margin-left: 90px;
-    width: 120px;
-}
+
 .cardsearch{
     box-shadow: 1px 5px 5px rgb(226, 221, 221);
     margin-top: -7px;
@@ -26,6 +23,7 @@ button{
     position: absolute;
     margin-left: 47px;
     height: 33px;
+    width: 120px;
 }
 .delete{
     margin-top: -7px;

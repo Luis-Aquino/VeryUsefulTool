@@ -1,5 +1,6 @@
 package br.king.vuttr.business;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,10 +22,12 @@ public class ToolBusiness {
 	}
 	
 	public List<Tool> findByTitle(String str){
+		str = str.toLowerCase();
 		return repository.findByTitle(str);
 	}
 	
 	public List<Tool> findByTag(String str){
+		str = str.toLowerCase();
 		return repository.findByTag(str);
 	}
 	
@@ -32,8 +35,15 @@ public class ToolBusiness {
 		Optional<Tool> retorno = repository.findById(id);
 		return retorno.get();
 	}
-	
+	//Método para inserir ferramentas, passando sempre o campo tag, para lowercase
+	//para melhoras a exepriência do usuário nas consultas
 	public Tool insert(Tool tool) throws ToolException {
+		List<String> tags = new ArrayList<String>();
+		for (int i = 0; i < tool.getTags().size(); i++ ) {
+			tags.add(tool.getTags().get(i).toLowerCase());
+		}
+		tool.setTags(tags);
+
 		this.validateTool(tool);
 		return repository.save(tool);
 	}

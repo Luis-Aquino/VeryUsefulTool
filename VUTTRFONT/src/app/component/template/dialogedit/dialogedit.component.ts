@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Inject } from '@angular/core';
 import { Tool } from 'src/app/tool.model';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-dialogedit',
   templateUrl: './dialogedit.component.html',
-  styleUrls: ['./dialogedit.component.css']
+  styleUrls: ['./dialogedit.component.css'],
 })
 //Classe/componente de diálogo para modificação de ferramenta
 export class DialogeditComponent implements OnInit {

@@ -10,7 +10,6 @@ import br.king.vuttr.entities.Tool;
 
 //Classe de persistência utilizando a implementação da especificação jpa do spring
 public interface ToolRepository extends JpaRepository<Tool, Integer>{
-	
 	//Query que retorna a tool pelo título 
 	@Query("SELECT t FROM Tool t WHERE t.title LIKE %:str%")
 	public List<Tool> findByTitle(@Param("str") String str);

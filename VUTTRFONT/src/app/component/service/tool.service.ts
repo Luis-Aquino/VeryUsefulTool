@@ -32,12 +32,12 @@ export class ToolService {
 
     //Consulta api para trazer todas as ferramentas cadastradas
     findAll() : Observable<Tool[]> {
-      return this.http.get<Tool[]>(this.urlBase); 
+      return this.http.get<Tool[]>(this.urlBase + "/findAll"); 
     }
 
     //Consulta api para trazer as ferramentas que possuem a tag cadastrada
     findByTag(tag: string) : Observable<Tool[]>{
-      let url = `${this.urlBase}/tag/${tag}`;
+      let url = `${this.urlBase}?tag=${tag}`;
     
       return this.http.get<Tool[]>(url);
     }
