@@ -10,10 +10,13 @@ button{
     width: 120px;
 }
 .cardsearch{
-    margin-top: -20px;
+    box-shadow: 1px 5px 5px rgb(226, 221, 221);
+    margin-top: -7px;
     max-width: 600px;
 }
 .cards{
+    box-shadow: 1px 5px 5px rgb(226, 221, 221);
+    margin-top: 20px;
     max-width: 600px;
 }
 .card-text-content{

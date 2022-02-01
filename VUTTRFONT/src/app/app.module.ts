@@ -18,9 +18,8 @@ import { DialognewComponent } from './component/template/dialognew/dialognew.com
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { DialogdeleteComponent } from './component/template/dialogdelete/dialogdelete.component';
-import { DialogmodifyComponent } from './component/template/dialogmodify/dialogmodify.component';
-
+import { DialogremoveComponent } from './component/template/dialogremove/dialogremove.component';
+import { DialogeditComponent } from './component/template/dialogedit/dialogedit.component';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,8 @@ import { DialogmodifyComponent } from './component/template/dialogmodify/dialogm
     HeaderComponent,
     CardsrcnaddComponent,
     DialognewComponent,
-    DialogdeleteComponent,
-    DialogmodifyComponent,
+    DialogremoveComponent,
+    DialogeditComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,6 @@
 .header{
     display: flex;
-    /* align-items: center;  */
+
 }
 .spacer {
     flex: 1 1 auto;
@@ -9,3 +9,9 @@ span.title-group {
     margin-left: 32.6%;
     text-align: right;
 } 
+.header mat-elevation-z4{
+    height: 20px;
+}
+.row{
+    height: 30px;
+}

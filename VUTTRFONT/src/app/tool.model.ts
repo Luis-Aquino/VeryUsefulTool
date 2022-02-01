@@ -1,3 +1,4 @@
+//Interface de modelo que contém os atributos de ferramentas
 export interface Tool{
     idTool?: number;
     title: String;

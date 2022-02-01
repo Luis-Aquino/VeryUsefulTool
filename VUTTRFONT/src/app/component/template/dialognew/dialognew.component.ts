@@ -4,7 +4,6 @@ import { Tool } from 'src/app/tool.model';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { Router } from '@angular/router';
 
@@ -25,39 +24,33 @@ export class DialognewComponent implements OnInit {
     description: "",
     tags: [],
   }
-
-  @ViewChild('tagInput')
-  tagInput!: ElementRef<HTMLInputElement>;
-
   
   constructor(
     public dialogRef: MatDialogRef<DialognewComponent>,
     private router: Router,
   ) {  
  }
-
+  //Navega para /newTool quanto iniciado
   ngOnInit(): void {
-
+    this.router.navigate(['newTool']);
   }
   saveTool(): void {
     this.tool.tags = this.tags;
     console.log(this.tool);
-    this.dialogRef.close(this.tool);
     this.router.navigate(['']);
+    this.dialogRef.close(this.tool);
   }
 
   cancel(): void {
+    this.router.navigate(['']);
     this.dialogRef.close();
-    /*this.toolForm.reset()*/
   }
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-
     // Add our tag
     if (value) {
       this.tags.push(value);
     }
-
     // Clear the input value
     event.chipInput!.clear();
 
@@ -71,11 +64,5 @@ export class DialognewComponent implements OnInit {
       this.tags.splice(index, 1);
     }
   }
-
-  selected(event: MatAutocompleteSelectedEvent): void {
-    this.tags.push(event.option.viewValue);
-    this.tagInput.nativeElement.value = '';
-    this.tagCtrl.setValue(null);
-  }
-
+  
 }

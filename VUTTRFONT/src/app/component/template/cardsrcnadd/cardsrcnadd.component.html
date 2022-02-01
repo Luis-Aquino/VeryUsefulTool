@@ -6,7 +6,7 @@
             <mat-icon matSuffix>search</mat-icon>
         </mat-form-field>
             <mat-checkbox class="example-margin" color= "primary" (change) = "setSearch()">Search in tags only</mat-checkbox>  
-            <button mat-raised-button color="primary" (click) = "addTool()" routerLink="newTool" class="botaoNew"><mat-icon class ="add">add</mat-icon>Add</button>   
+            <button mat-raised-button color="primary" (click) = "addTool()" class="botaoNew"><mat-icon class ="add">add</mat-icon>Add</button>   
                
     </mat-card>
 </div>
@@ -15,7 +15,7 @@
     <mat-card class="cards" *ngFor="let tool of tools" fxFlex="50">
         <mat-card-header>
           <mat-card-title class = "cardTitle"><a href= {{tool.link}}>{{tool.title}}</a></mat-card-title>
-          <button mat-raised-button class="modify" color="primary" (click) = "modifyTool(tool)"><mat-icon class ="Modify">create</mat-icon>Modify</button>
+          <button mat-raised-button class="modify" color="primary" (click) = "modifyTool(tool)"><mat-icon class ="Modify">create</mat-icon>Edit</button>
           <button mat-raised-button color="primary" (click) = "deleteTool(tool)"><mat-icon class ="delete">clear</mat-icon>Remove</button>
         </mat-card-header>
         <p></p>
