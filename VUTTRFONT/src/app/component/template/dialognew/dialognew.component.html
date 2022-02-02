@@ -1,10 +1,9 @@
 <h1 mat-dialog-title><mat-icon>add</mat-icon>Add new tool</h1>
     <div>
-        <form [formGroup]="form">
+        <form>
             <mat-form-field appearance="outline">
                 <mat-label>Tool Name</mat-label>
                 <input matInput name="title" [(ngModel)]="tool.title">
-                <div>Name is required.</div>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Tool Link</mat-label>
@@ -25,8 +24,6 @@
                 </mat-chip>
                 <input
                   placeholder="New tag..."
-                  #fruitInput
-                  [formControl]="tagCtrl"
                   [matChipInputFor]="chipList"
                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                   (matChipInputTokenEnd)="add($event)">

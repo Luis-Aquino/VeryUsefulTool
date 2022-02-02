@@ -2,7 +2,6 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { Tool } from 'src/app/tool.model';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { Router } from '@angular/router';
@@ -12,14 +11,11 @@ import { Router } from '@angular/router';
   templateUrl: './dialognew.component.html',
   styleUrls: ['./dialognew.component.css']
 })
+
 export class DialognewComponent implements OnInit {  
+  //Separador de tags, e vetor de tags
   separatorKeysCodes: number[] = [ENTER, COMMA];
-  tagCtrl = new FormControl();
-  filteredTags!: Observable<string[]>;
   tags: string[] = [];
-  form!: FormGroup;
-
-
   tool: Tool = {
     title: "",
     link: "",
@@ -33,22 +29,22 @@ export class DialognewComponent implements OnInit {
   ) { }
   //Navega para /newTool quanto iniciado
   ngOnInit(): void {
-    this.form = new FormGroup({
-      title: new FormControl('', [Validators.required]),
-    });
     this.router.navigate(['newTool']);
   }
+  //Método o qual pega os atributos de fraamenta e joga a classe de volta
+  //para o componente que realiza o cadastro chamando a classe de serviço
   saveTool(): void {
     this.tool.tags = this.tags;
     console.log(this.tool);
     this.router.navigate(['']);
     this.dialogRef.close(this.tool);
   }
-
+  //Método o qual fecha o app
   cancel(): void {
     this.router.navigate(['']);
     this.dialogRef.close();
   }
+  //Método para as tags
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
     // Add our tag
@@ -58,7 +54,6 @@ export class DialognewComponent implements OnInit {
     // Clear the input value
     event.chipInput!.clear();
 
-    this.tagCtrl.setValue(null);
   }
 
   remove(tag: string): void {

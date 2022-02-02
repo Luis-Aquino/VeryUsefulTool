@@ -22,6 +22,12 @@ import org.springframework.web.bind.annotation.RestController;
 import br.king.vuttr.business.ToolBusiness;
 import br.king.vuttr.entities.Tool;
 import br.king.vuttr.exceptions.ToolException;
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.info.Info;
+import io.swagger.v3.oas.annotations.media.ExampleObject;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import br.king.vuttr.Messages;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -33,6 +39,11 @@ public class ToolCtrl {
 	private ToolBusiness business;
 	
 	@GetMapping("/findAll")
+	@Operation(summary="Find all tools created.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "200",
+						  description ="Fetched all the tools created."),
+						  @ApiResponse(responseCode = "400",
+						  description ="Not Available.")})
 	public ResponseEntity<List<Tool>> findAll(){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
@@ -50,6 +61,13 @@ public class ToolCtrl {
 	}
 
 	@PostMapping
+	@Operation(summary="Create a new tool.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "201",
+	  description ="Tool created with success."),
+	  @ApiResponse(responseCode = "400",
+	  description ="Not Available."),
+	  @ApiResponse(responseCode = "500",
+	  description ="Error to create tool.")})
 	public ResponseEntity<Tool> insert(@RequestBody Tool tool){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.CREATED;
@@ -68,6 +86,13 @@ public class ToolCtrl {
 	}
 
 	@PutMapping
+	@Operation(summary="Update Tool.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "200",
+	  description ="Tool updated with success."),
+	  @ApiResponse(responseCode = "400",
+	  description ="Not Available."),
+	  @ApiResponse(responseCode = "500",
+	  description ="Error to update tool.")})
 	public ResponseEntity<Tool> update(@RequestBody Tool tool){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
@@ -86,6 +111,11 @@ public class ToolCtrl {
 	}
 
 	@DeleteMapping("/{id}")
+	@Operation(summary="Delete Tool.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "204",
+	  description ="Tool deleted with success."),
+	  @ApiResponse(responseCode = "500",
+	  description ="Error to delete tool.")})
 	public ResponseEntity<Void> delete(@PathVariable Integer id){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.NO_CONTENT;
@@ -101,6 +131,11 @@ public class ToolCtrl {
 	}
 	
 	@GetMapping("/title/{str}")
+	@Operation(summary="Search tool by title.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "200",
+	  description ="The search doesn't bring any results for tools."),
+	  @ApiResponse(responseCode = "400",
+	  description ="System Error.")})
 	public ResponseEntity<List<Tool>> findByTitle(@PathVariable String str){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
@@ -108,8 +143,8 @@ public class ToolCtrl {
 		try {
 			list = business.findByTitle(str);
 			if(list.size() == 0) {
-				headers.add("message", Messages.get("0001"));
 			}
+			headers.add("message", Messages.get("0001"));
 		}catch (Exception e) {
 			status = HttpStatus.BAD_REQUEST;
 			headers.add("message", Messages.get("0002"));
@@ -119,6 +154,11 @@ public class ToolCtrl {
 	}
 	
 	@GetMapping
+	@Operation(summary="Search tool by tag.")
+	@ApiResponses(value= {@ApiResponse(responseCode = "200",
+	  description ="The search doesn't bring any results for tools."),
+	  @ApiResponse(responseCode = "400",
+	  description ="System Error.")})
 	public ResponseEntity<List<Tool>> findText(@RequestParam String tag){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;

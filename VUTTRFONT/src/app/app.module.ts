@@ -20,6 +20,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogremoveComponent } from './component/template/dialogremove/dialogremove.component';
 import { DialogeditComponent } from './component/template/dialogedit/dialogedit.component';
+import {enableProdMode} from '@angular/core';
 
 @NgModule({
   declarations: [
