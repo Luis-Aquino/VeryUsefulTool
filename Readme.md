@@ -25,6 +25,8 @@ Spring Boot: (https://spring.io/projects/spring-boot).
 
 H2 Database: (https://www.h2database.com/html/main.html).
 
+OpenAPI: (https://www.openapis.org/).
+
 ##FRONT END##
 
 Angular: (https://angular.io/). Versão: 13.
