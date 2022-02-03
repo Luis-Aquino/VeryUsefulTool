@@ -2,8 +2,6 @@
 
 Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilidade geral.
 
-Desenvolvido por: [Luis Aquino](https://www.linkedin.com/in/luis-eduardo-peixoto-de-aquino-941606132).
-
 # Como Utilizar o App
 
 O App pode ser utilizado em: https://veryusefultoolstorememberfront.herokuapp.com/ .Esperar alguns minutos até o app subir por completo.
