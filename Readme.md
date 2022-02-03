@@ -9,6 +9,12 @@ O App pode ser utilizado em: https://veryusefultoolstorememberfront.herokuapp.co
 Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 
 ## 🛠 Tecnologias Utilizadas no projeto:
+##IDE's##
+
+Eclipse IDE: https://www.eclipse.org/downloads/ .
+
+Visual Studio Code: https://code.visualstudio.com/ .
+
 ##BACK END##
 
 JAVA: (https://www.oracle.com/java/). Versão: 11.
@@ -24,6 +30,10 @@ Angular: (https://angular.io/). Versão: 13.
 Angular Materials: (https://material.angular.io/).
 
 Node: (https://nodejs.org/).
+
+##DEPLOY##
+
+Heroku: https://www.heroku.com
 
 ## 🚀 Instalação
 
