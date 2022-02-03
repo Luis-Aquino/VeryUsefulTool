@@ -32,7 +32,7 @@ Node: (https://nodejs.org/).
 ##BACK END##
 
 Pode ser executado em qualquer IDE que tenho suporte ao java, preferencialmente o eclipse, basta importar a pasta VUTTRBACK e executar como um spring app.
-A partir disso o back end será executado na porta 300.
+A partir disso o back end será executado na porta 3000.
 
 ##FRONT END##
 
