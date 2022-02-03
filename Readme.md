@@ -8,7 +8,7 @@ Desenvolvido por: [Luis Aquino](https://www.linkedin.com/in/luis-eduardo-peixoto
 
 O App pode ser utilizado em(esperar alguns minutos até o app subir por completo): https://veryusefultoolstorememberfront.herokuapp.com/ .
 
-🛠 Tecnologias Utilizadas no projeto:
+## 🛠 Tecnologias Utilizadas no projeto:
 ## BACK END
 
 JAVA: (https://www.oracle.com/java/). Versão: 11.
@@ -41,4 +41,3 @@ Após isso executar:
 ng serve
 ```
 A partir disso o front ent será executado na porta 4200.
-
