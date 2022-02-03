@@ -14,13 +14,17 @@ Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 ##BACK END##
 
 JAVA: (https://www.oracle.com/java/). Versão: 11.
+
 Spring Boot: (https://spring.io/projects/spring-boot).
+
 H2 Database: (https://www.h2database.com/html/main.html).
 
 ##FRONT END##
 
 Angular: (https://angular.io/). Versão: 13.
+
 Angular Materials: (https://material.angular.io/).
+
 Node: (https://nodejs.org/).
 
 ## 🚀 Instalação
