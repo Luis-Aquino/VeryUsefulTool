@@ -62,7 +62,7 @@ export class CardsrcnaddComponent implements OnInit {
 
   //Função/método para modificar ferramenta, passando o objeto ferramenta para o componente de 
   //diálogo e recebendo de volta do diálogo a ferramenta modificada e chamando o método update da classe
-  //de serviço
+  //de serviço.
   modifyTool(tool: Tool): void{
 
     const dialogRef = this.dialog.open(DialogeditComponent, {
