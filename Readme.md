@@ -11,7 +11,7 @@ Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 ## 🛠 Tecnologias Utilizadas no projeto:
 ##IDE's##
 
-Eclipse IDE: https://www.eclipse.org/downloads/ .
+Eclipse IDE: (https://www.eclipse.org/downloads/) .
 
 Visual Studio Code: https://code.visualstudio.com/ .
 
@@ -33,7 +33,7 @@ Node: (https://nodejs.org/).
 
 ##DEPLOY##
 
-Heroku: https://www.heroku.com
+Heroku: (https://www.heroku.com).
 
 ## 🚀 Instalação
 
