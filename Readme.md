@@ -7,6 +7,7 @@ Desenvolvido por: [Luis Aquino](https://www.linkedin.com/in/luis-eduardo-peixoto
 # Como Utilizar o App
 
 O App pode ser utilizado em(esperar alguns minutos até o app subir por completo): https://veryusefultoolstorememberfront.herokuapp.com/ .
+Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 
 ## 🛠 Tecnologias Utilizadas no projeto:
 ##BACK END##
