@@ -47,15 +47,15 @@ export class DialognewComponent implements OnInit {
   //Método para as tags
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-    // Add our tag
+    // Adiciona a tag
     if (value) {
       this.tags.push(value);
     }
-    // Clear the input value
+    // Limpa o valor de input
     event.chipInput!.clear();
 
   }
-
+  //Método para remover a tag
   remove(tag: string): void {
     const index = this.tags.indexOf(tag);
 
