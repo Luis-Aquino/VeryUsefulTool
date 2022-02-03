@@ -1,10 +1,10 @@
 # Very Useful Tools To Remember
 
-Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilizadae geral.
+Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilizadade geral.
 
 Desenvolvido por: [Luis Aquino](https://www.linkedin.com/in/luis-eduardo-peixoto-de-aquino-941606132).
 
-# UTILIZAR O APP
+# Como Utilizar o App
 
 O App pode ser utilizado em(esperar alguns minutos até o app subir por completo): https://veryusefultoolstorememberfront.herokuapp.com/ .
 
