@@ -6,7 +6,7 @@ Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilida
 
 O App pode ser utilizado em: https://veryusefultoolstorememberfront.herokuapp.com/ .Esperar alguns minutos até o app subir por completo.
 
-A docuemntação das api's do back end, pode ser verificada em : https://veryusefultoolsbackend.herokuapp.com/swagger-ui/index.html .
+A docuemntação das api's do back end, podem ser verificadas em : https://veryusefultoolsbackend.herokuapp.com/swagger-ui/index.html .
 
 Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 
