@@ -1,12 +1,12 @@
 # Very Useful Tools To Remember
 
-Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilizadade geral.
+Ferramenta de cadastro, edição, remoção e pesquisa de ferramentas de utilidade geral.
 
 Desenvolvido por: [Luis Aquino](https://www.linkedin.com/in/luis-eduardo-peixoto-de-aquino-941606132).
 
 # Como Utilizar o App
 
-O App pode ser utilizado em(esperar alguns minutos até o app subir por completo): https://veryusefultoolstorememberfront.herokuapp.com/ .
+O App pode ser utilizado em: https://veryusefultoolstorememberfront.herokuapp.com/ .Esperar alguns minutos até o app subir por completo.
 
 Vídeo explicativo do App: https://youtu.be/Nuptkpd3daA .
 
@@ -31,7 +31,7 @@ Node: (https://nodejs.org/).
 
 ##BACK END##
 
-Pode ser executado em qualquer IDE que tenho suporte ao java, preferencialmente o eclipse, basta importar a pasta VUTTRBACK e executar como um spring app.
+Pode ser executado em qualquer IDE que tenha suporte ao java, preferencialmente o eclipse, basta importar a pasta VUTTRBACK e executar como um spring app.
 A partir disso o back end será executado na porta 3000.
 
 ##FRONT END##
