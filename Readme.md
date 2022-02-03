@@ -36,7 +36,7 @@ A partir disso o back end será executado na porta 3000.
 
 ##FRONT END##
 
-É necessário o node para instalar o CLI do angular, uma vez instalado e dentro da pasta do angular no termianl, executar o comando:
+É necessário o node para instalar o CLI do angular, uma vez instalado e dentro da pasta do angular no terminal, executar o comando:
 Windows:
 ```
 npm install -g @angular/cli
