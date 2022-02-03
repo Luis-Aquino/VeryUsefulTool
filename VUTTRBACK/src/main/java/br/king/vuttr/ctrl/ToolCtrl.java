@@ -22,14 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 import br.king.vuttr.business.ToolBusiness;
 import br.king.vuttr.entities.Tool;
 import br.king.vuttr.exceptions.ToolException;
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.info.Info;
-import io.swagger.v3.oas.annotations.media.ExampleObject;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import br.king.vuttr.Messages;
-
+//Principal classe de serviços 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping(value="tools")
@@ -37,7 +34,7 @@ public class ToolCtrl {
 	
 	@Autowired
 	private ToolBusiness business;
-	
+	//Método para retornar todas as ferramentas cadastradas
 	@GetMapping("/findAll")
 	@Operation(summary="Find all tools created.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "200",
@@ -59,7 +56,7 @@ public class ToolCtrl {
 		}
 		return new ResponseEntity<List<Tool>>(list, headers, status);
 	}
-
+	//Método para inserir ferramenta
 	@PostMapping
 	@Operation(summary="Create a new tool.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "201",
@@ -84,8 +81,7 @@ public class ToolCtrl {
 		}
 		return new ResponseEntity<Tool>(tool, headers, status);
 	}
-
-	@PutMapping
+	//Método para atualizar ferramenta 
 	@Operation(summary="Update Tool.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "200",
 	  description ="Tool updated with success."),
@@ -109,7 +105,7 @@ public class ToolCtrl {
 		}
 		return new ResponseEntity<Tool>(tool, headers, status);
 	}
-
+	//Método para deletar ferramenta por id
 	@DeleteMapping("/{id}")
 	@Operation(summary="Delete Tool.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "204",
@@ -129,7 +125,7 @@ public class ToolCtrl {
 		}
 		return new ResponseEntity<Void>(headers, status);
 	}
-	
+	//Método para buscar ferramentas de acordo com o título inserido
 	@GetMapping("/title/{str}")
 	@Operation(summary="Search tool by title.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "200",
@@ -152,14 +148,14 @@ public class ToolCtrl {
 		return new ResponseEntity<List<Tool>>(list, headers, status);
 
 	}
-	
+	//Método para buscar ferramentas de acordo com a tag inserida
 	@GetMapping
 	@Operation(summary="Search tool by tag.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "200",
 	  description ="The search doesn't bring any results for tools."),
 	  @ApiResponse(responseCode = "400",
 	  description ="System Error.")})
-	public ResponseEntity<List<Tool>> findText(@RequestParam String tag){
+	public ResponseEntity<List<Tool>> findTag(@RequestParam String tag){
 		HttpHeaders headers = new HttpHeaders();
 		HttpStatus status = HttpStatus.OK;
 		List<Tool> list = new ArrayList<Tool>();

@@ -15,6 +15,6 @@ public interface ToolRepository extends JpaRepository<Tool, Integer>{
 	public List<Tool> findByTitle(@Param("str") String str);
 	
 	//Query que retorna a tool dado o nome de uma tag
-	@Query("SELECT DISTINCT t FROM Tool t JOIN t.tags tag WHERE tag LIKE CONCAT('%', :str, '%')")
+	@Query("SELECT DISTINCT t FROM Tool t  JOIN t.tags tag WHERE tag LIKE CONCAT('%', :str, '%')")
 	public List<Tool> findByTag(@Param("str") String str);
 }

@@ -7,7 +7,7 @@ import java.util.Properties;
 public class Messages {
 	
 public static Properties props = load();
-	
+	//Classe para ler o arquivo de mensagens e retorná-las na classe de controlling
 	private static Properties load() {
 		Properties props = new Properties();
 		try {

@@ -9,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
+//Classe representando os atributos de ferramentas
 @Entity
 @Table(name="tb_tools")
 public class Tool {
@@ -30,7 +30,7 @@ public class Tool {
 	
 	@ElementCollection
 	private List<String> tags;
-	
+	//Construtor
 	public Tool(Integer idTool, String title, String link, String description, List<String> tags) {
 		this.idTool = idTool;
 		this.title = title;
@@ -42,7 +42,7 @@ public class Tool {
 	public Tool() {
 		
 	}
-	
+	//Getters e setters
 	public Integer getIdTool() {
 		return idTool;
 	}
@@ -62,7 +62,7 @@ public class Tool {
 	public String getDescription() {
 		return description;
 	}
-	
+	//Setters
 	public void setDescription(String description) {
 		this.description = description;
 	}
