@@ -43,4 +43,4 @@ Após isso executar:
 ```
 ng serve
 ```
-A partir disso o front ent será executado na porta 4200.
+A partir disso o front end será executado na porta 4200.
