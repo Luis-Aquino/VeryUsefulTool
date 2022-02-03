@@ -34,7 +34,7 @@ public class ToolCtrl {
 	
 	@Autowired
 	private ToolBusiness business;
-	//Método para retornar todas as ferramentas cadastradas
+	//Método para retornar todas as ferramentas cadastradas.
 	@GetMapping("/findAll")
 	@Operation(summary="Find all tools created.")
 	@ApiResponses(value= {@ApiResponse(responseCode = "200",
